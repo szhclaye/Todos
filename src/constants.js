@@ -1,0 +1,5 @@
+export const FilterTypes = {
+  ALL: 'SHOW_ALL',
+  COMPLETED: 'SHOW_COMPLETED',
+  UNCOMPLETED: 'SHOW_UNCOMPLETED'
+}
