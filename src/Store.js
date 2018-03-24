@@ -1,27 +1,27 @@
-import { createStore,combineReducers,applyMiddleware,compose } from 'redux'
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 
-import { reducer as todoReducer } from './todos'
-import { reducer as filterReducer } from './filter';
+import { reducer as todoReducer } from "./todos";
+import { reducer as filterReducer } from "./filter";
 
-import Perf from 'react-addons-perf'
+import Perf from "react-addons-perf";
 
 const win = window;
 win.Perf = Perf;
 
 const reducers = combineReducers({
-    todos:todoReducer,
-    filter:filterReducer
-})
+  todos: todoReducer,
+  visibilityFilter: filterReducer
+});
+// state.todos   state.visibilityFilter
 
 const middlewares = [];
-if (process.env.NODE_ENV !== 'production') {
-    middlewares.push(require('redux-immutable-state-invariant')());
-  }
+if (process.env.NODE_ENV !== "production") {
+  middlewares.push(require("redux-immutable-state-invariant")());
+}
 
-  const storeEnhancers = compose(
-    applyMiddleware(...middlewares),
-    (win && win.devToolsExtension) ? win.devToolsExtension() : (f) => f
-  );
+const storeEnhancers = compose(
+  applyMiddleware(...middlewares),
+  win && win.devToolsExtension ? win.devToolsExtension() : f => f
+);
 
-
-  export default createStore(reducers, {}, storeEnhancers);
+export default createStore(reducers, {}, storeEnhancers);

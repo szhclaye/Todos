@@ -1,12 +1,12 @@
-import React from 'react'
-import { view as Todos } from './todos'
-import { view as Filter } from './filter'
+import React from "react";
+import { view as Todos } from "./todos";
+import { view as Filter } from "./filter";
 
-const TodoApp = ()=>(
-    <div>
-        <Todos />
-        <Filter />
-    </div>
-)
- 
-export default TodoApp
+const TodoApp = () => (
+  <div>
+    <Todos />
+    <Filter />
+  </div>
+);
+
+export default TodoApp;
