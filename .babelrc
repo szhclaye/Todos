@@ -1,0 +1,23 @@
+//babel配置文件，不需要做修改，因为都配置好了
+{
+  "presets": [
+    "env",
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true
+    }],
+    "react-hot-loader/babel"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    }
+  }
+}
