@@ -1,0 +1,9 @@
+.container{
+   width:750px;
+   height:10px;
+   border:2px solid red;
+   background-color:green;
+   .input_i{
+       border:2px solid blue;
+   }
+}

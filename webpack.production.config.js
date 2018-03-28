@@ -35,7 +35,22 @@ module.exports = {
             }
           ]
         })
-      }
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 4096
+          }
+        }]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
+      },
     ]
   },
   plugins: [

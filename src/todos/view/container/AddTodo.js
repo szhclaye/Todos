@@ -1,12 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
+import  "./addTodo.css";
 
 import { addTodo } from "../../actionsCreator";
 
 const AddTodo = ({ dispatch }) => {
   let input;
   return (
-    <div>
+    <div className="container">
       <form
         onSubmit={e => {
           e.preventDefault();
@@ -17,8 +18,10 @@ const AddTodo = ({ dispatch }) => {
           input.value = "";
         }}
       >
-        <input placeholder="Input todos..." ref={node => (input = node)} />
-        <button type="submit">AddTodo</button>
+        <input  className="input_i"
+                placeholder="输入待办事项.." 
+                ref={node => (input = node)} />
+        <button type="submit">添加</button>
       </form>
     </div>
   );
