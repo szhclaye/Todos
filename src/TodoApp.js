@@ -1,6 +1,7 @@
 import React from "react";
 import { view as Todos } from "./todos";
 import { view as Filter } from "./filter";
+import { view as Weather } from './weathers';
 
 const styles = {
     marginTop:'50px',
@@ -13,6 +14,7 @@ const TodoApp = () => (
     <h1 style={styles}>Todos</h1>
     <Todos />
     <Filter />
+    <Weather />
   </div>
 );
 
