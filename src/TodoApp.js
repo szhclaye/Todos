@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { ConnectedRouter } from 'react-router-redux';
 import { Route,Link } from 'react-router-dom';
@@ -5,6 +6,12 @@ import createHistory from 'history/createBrowserHistory';
 
 import { view as Todos } from './todos'
 import { view as Filter } from './filter'
+=======
+import React from "react";
+import { view as Todos } from "./todos";
+import { view as Filter } from "./filter";
+import { view as Weather } from './weathers';
+>>>>>>> szhclaye
 
 const styles = {
     marginTop: '50px',
@@ -14,6 +21,7 @@ const styles = {
 const history = createHistory();
 
 const TodoApp = () => (
+<<<<<<< HEAD
     <ConnectedRouter history={history}>
         <div>
             <h1 style={styles}>Todos</h1>
@@ -43,5 +51,14 @@ const About = () =>(
 const Topics = () =>(
     <div>Topics</div>
 )
+=======
+  <div>
+    <h1 style={styles}>Todos</h1>
+    <Todos />
+    <Filter />
+    <Weather />
+  </div>
+);
+>>>>>>> szhclaye
 
 export default TodoApp
