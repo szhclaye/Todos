@@ -30,15 +30,22 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true,
+              localIdentName: '[name]_[local]-[hash:base64:5]',
+            }
+          },
           'postcss-loader'
         ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [{
-            loader: 'url-loader',
-            options: {
+          loader: 'url-loader',
+          options: {
             limit: 4096
           }
         }]
