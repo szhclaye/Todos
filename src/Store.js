@@ -20,7 +20,7 @@ const reducers = combineReducers({
     todos: todoReducer,
     visibilityFilter: filterReducer,
     weatherOfCity: weatherReducer,
-    router: routerReducer,
+    router: routerReducer,   // route
 })
 // state.todos   state.visibilityFilter
 const history = createHistory()
@@ -28,7 +28,7 @@ const history = createHistory()
 const middlewares = [
     thunkMiddleware,
     loggerMiddleware,
-    routerMiddleware(history)
+    routerMiddleware(history)          //route中间件
 ];
 /* thunkMiddleware要放在第一位 */
 if (process.env.NODE_ENV !== 'production') {
@@ -37,7 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const storeEnhancers = compose(
     applyMiddleware(...middlewares),
-    win && win.devToolsExtension ? win.devToolsExtension() : f => f,
+    win && win.devToolsExtension ? win.devToolsExtension() : f => f,  // Devtools
 )
 
 export default createStore(reducers, {}, storeEnhancers)

@@ -18,7 +18,7 @@ const TodoApp = () => (
     <ConnectedRouter history={history}>
         <div>
             <h1 style={styles}>Todos</h1>
-            <Todos />
+            <Todos />    
             <Filter />
             <Weather />
             <ul>
@@ -39,6 +39,7 @@ const TodoApp = () => (
         </div>
     </ConnectedRouter>
 )
+// Todos need changes
 
 const Home = () => <div>Home</div>
 
