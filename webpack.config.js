@@ -32,6 +32,7 @@ module.exports = {
           'style-loader',
           {
             loader: 'css-loader',
+
             options: {                 // css-module
               importLoaders: 1,
               modules: true,
