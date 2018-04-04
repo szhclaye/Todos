@@ -9,7 +9,7 @@ const styles = {
     margin:'10px auto',
     padingLeft:'10px',
     display:'flex',
-    flexDirection:'cloumn',
+    flexDirection:'column',
     alignItems:'flex-start'
 };
 

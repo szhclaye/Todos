@@ -1,24 +1,23 @@
-
 {
-  "presets": [
-    "env",
-    "react",
-    "stage-0"
-  ],
-  "plugins": [
-    ["transform-runtime", {
-      "helpers": false,
-      "polyfill": false,
-      "regenerator": true
-    }],
-    "react-hot-loader/babel",
-    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
-  ],
-  "env": {
-    "development": {
-      "plugins": [
+    "presets": ["env", "react", "stage-0"],
+    "plugins": [
+        [
+            "transform-runtime",
+            {
+                "helpers": false,
+                "polyfill": false,
+                "regenerator": true
+            }
+        ],
+        [
+            "import",
+            { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }
+        ],
         "react-hot-loader/babel"
-      ]
+    ],
+    "env": {
+        "development": {
+            "plugins": ["react-hot-loader/babel"]
+        }
     }
-  }
 }
